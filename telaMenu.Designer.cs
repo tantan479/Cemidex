@@ -182,7 +182,6 @@
             this.label1.Size = new System.Drawing.Size(100, 27);
             this.label1.TabIndex = 9;
             this.label1.Text = "Falecido";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -197,7 +196,6 @@
             this.label2.Size = new System.Drawing.Size(128, 27);
             this.label2.TabIndex = 10;
             this.label2.Text = "Requerente";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -212,7 +210,6 @@
             this.label3.Size = new System.Drawing.Size(160, 27);
             this.label3.TabIndex = 11;
             this.label3.Text = "Buscar/Editar";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -304,7 +301,6 @@
             this.label8.Size = new System.Drawing.Size(256, 49);
             this.label8.TabIndex = 18;
             this.label8.Text = "Menu de Opções";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label9
             // 
@@ -317,7 +313,6 @@
             this.label9.Size = new System.Drawing.Size(140, 22);
             this.label9.TabIndex = 19;
             this.label9.Text = "nome do usuário";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label10
             // 
@@ -336,7 +331,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Cemidex.Properties.Resources.background1;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 750);
             this.Controls.Add(this.label10);

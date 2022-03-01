@@ -21,9 +21,9 @@ namespace Cemidex.Models
 
 
         [Required, ForeignKey("Falecido")]
-        public DateTime DataEnterro { get; set; }
+        public DateTime DataSepultamento { get; set; }
 
-        public DateTime DataExulmacao{ get; set; }
+        public DateTime DataExumacao{ get; set; }
 
     }
 }
