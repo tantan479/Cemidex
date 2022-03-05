@@ -47,9 +47,8 @@
             this.btFalAdd = new System.Windows.Forms.Button();
             this.btFalEd = new System.Windows.Forms.Button();
             this.btFalRem = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvFalecidos = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fal_cova = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fal_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fal_mae = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fal_pai = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,7 +60,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versao1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFalecidos)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -143,11 +142,11 @@
             // 
             // cbRequerente
             // 
-            this.cbRequerente.FormattingEnabled = true;
             this.cbRequerente.Location = new System.Drawing.Point(30, 159);
             this.cbRequerente.Name = "cbRequerente";
             this.cbRequerente.Size = new System.Drawing.Size(182, 33);
             this.cbRequerente.TabIndex = 23;
+            this.cbRequerente.SelectedIndexChanged += new System.EventHandler(this.cbRequerente_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -213,6 +212,7 @@
             this.btFalAdd.Size = new System.Drawing.Size(32, 32);
             this.btFalAdd.TabIndex = 30;
             this.btFalAdd.UseVisualStyleBackColor = true;
+            this.btFalAdd.Click += new System.EventHandler(this.btFalAdd_Click);
             // 
             // btFalEd
             // 
@@ -232,27 +232,26 @@
             this.btFalRem.TabIndex = 32;
             this.btFalRem.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dgvFalecidos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvFalecidos.AllowUserToAddRows = false;
+            this.dgvFalecidos.AllowUserToDeleteRows = false;
+            this.dgvFalecidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFalecidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
-            this.fal_cova,
             this.fal_cpf,
             this.fal_mae,
             this.fal_pai,
             this.fal_idade,
             this.fal_sexo,
             this.fal_data});
-            this.dataGridView1.Location = new System.Drawing.Point(30, 315);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(1092, 358);
-            this.dataGridView1.TabIndex = 33;
+            this.dgvFalecidos.Location = new System.Drawing.Point(30, 315);
+            this.dgvFalecidos.Name = "dgvFalecidos";
+            this.dgvFalecidos.ReadOnly = true;
+            this.dgvFalecidos.RowHeadersWidth = 62;
+            this.dgvFalecidos.RowTemplate.Height = 33;
+            this.dgvFalecidos.Size = new System.Drawing.Size(1092, 358);
+            this.dgvFalecidos.TabIndex = 33;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -262,15 +261,6 @@
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 150;
-            // 
-            // fal_cova
-            // 
-            this.fal_cova.DataPropertyName = "id_Cova";
-            this.fal_cova.HeaderText = "Cova";
-            this.fal_cova.MinimumWidth = 8;
-            this.fal_cova.Name = "fal_cova";
-            this.fal_cova.ReadOnly = true;
-            this.fal_cova.Width = 150;
             // 
             // fal_cpf
             // 
@@ -333,7 +323,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1143, 750);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvFalecidos);
             this.Controls.Add(this.btFalRem);
             this.Controls.Add(this.btFalEd);
             this.Controls.Add(this.btFalAdd);
@@ -358,7 +348,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.versao1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFalecidos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,9 +373,8 @@
         private Button btFalAdd;
         private Button btFalEd;
         private Button btFalRem;
-        private DataGridView dataGridView1;
+        private DataGridView dgvFalecidos;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn fal_cova;
         private DataGridViewTextBoxColumn fal_cpf;
         private DataGridViewTextBoxColumn fal_mae;
         private DataGridViewTextBoxColumn fal_pai;

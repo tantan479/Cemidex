@@ -122,5 +122,60 @@ namespace Cemidex
                 }
             }
         }
+
+        private void btFalAdd_Click(object sender, EventArgs e)
+        {
+            using (var form = new FrmFalecido())
+            {
+                form.Text = "Inclusão";
+                int id = Convert.ToInt32(cbRequerente.SelectedValue);
+                form.numericRequerente.Value = id;
+                if(form.ShowDialog() == DialogResult.OK)
+                {
+                    using var db = new CemidexContext();
+                    Falecido falecido = new Falecido();
+                    falecido.Nome = form.txtNome.Text;
+                    falecido.Cpf = form.textCpf.Text;
+                    falecido.IdCova = Convert.ToInt32(form.numericCova.Text);
+                    falecido.NomeMae = form.txtMae.Text;
+                    falecido.NomePai = form.txtPai.Text;
+                    falecido.IdRequerente = Convert.ToInt32(form.numericRequerente.Value);
+                    falecido.Idade = Convert.ToInt32(form.numericIdade.Value);
+                    falecido.Sexo = form.cbEstadoCivil.Text;
+                    falecido.EstadoCivil = form.cbSexo.Text;
+                    falecido.DataObito = Convert.ToDateTime(form.dateObito.Text);
+                    db.Falecidos.Add(falecido);
+                    db.SaveChanges();
+                    AtualizarFalecidos(db);
+                    MessageBox.Show("Falecido Adicionado com Sucesso");
+
+
+                }
+            }
+        }
+
+        private void AtualizarFalecidos(CemidexContext db)
+        {
+            if (cbRequerente.Items.Count > 0)
+            {
+                this.Cursor = Cursors.WaitCursor;
+                int idRequerente = (cbRequerente.SelectedItem as Requerente).IdRequerente;
+     
+                List<Falecido> lengths = db.Falecidos.Where(x => x.IdRequerente == idRequerente).ToList();
+                int tam = lengths.Count();
+
+                dgvFalecidos.DataSource = lengths;
+
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void cbRequerente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (var db = new CemidexContext())
+            {
+                AtualizarFalecidos(db);
+            }
+        }
     }
 }

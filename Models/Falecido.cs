@@ -31,7 +31,7 @@ namespace Cemidex.Models
         [Required, MaxLength(100)]
         public string NomePai { get; set; }
 
-        public string Idade { get; set; }
+        public int Idade { get; set; }
 
         [MaxLength(1), MinLength(1)]
         public string Sexo { get; set; }

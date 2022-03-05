@@ -34,7 +34,6 @@
             this.numericCova = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericRequerente = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.textCpf = new System.Windows.Forms.TextBox();
             this.fdhdhdgjhfg = new System.Windows.Forms.Label();
@@ -43,17 +42,18 @@
             this.txtPai = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.numericIdade = new System.Windows.Forms.NumericUpDown();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.cbEstadoCivil = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbEstadoCivil = new System.Windows.Forms.ComboBox();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.dateObito = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.numericRequerente = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numericCova)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericIdade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,18 +108,6 @@
             this.label3.Size = new System.Drawing.Size(118, 22);
             this.label3.TabIndex = 4;
             this.label3.Text = "Requerente:";
-            // 
-            // numericRequerente
-            // 
-            this.numericRequerente.Location = new System.Drawing.Point(12, 196);
-            this.numericRequerente.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericRequerente.Name = "numericRequerente";
-            this.numericRequerente.Size = new System.Drawing.Size(180, 31);
-            this.numericRequerente.TabIndex = 5;
             // 
             // label4
             // 
@@ -203,26 +191,26 @@
             this.numericIdade.Size = new System.Drawing.Size(180, 31);
             this.numericIdade.TabIndex = 13;
             // 
-            // cbSexo
+            // cbEstadoCivil
             // 
-            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
+            this.cbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEstadoCivil.FormattingEnabled = true;
+            this.cbEstadoCivil.Items.AddRange(new object[] {
             "Solteiro",
             "Casado",
             "Víuvo",
             "Divorciado"});
-            this.cbSexo.Location = new System.Drawing.Point(255, 273);
-            this.cbSexo.MaxLength = 1;
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(225, 33);
-            this.cbSexo.TabIndex = 14;
+            this.cbEstadoCivil.Location = new System.Drawing.Point(255, 273);
+            this.cbEstadoCivil.MaxLength = 1;
+            this.cbEstadoCivil.Name = "cbEstadoCivil";
+            this.cbEstadoCivil.Size = new System.Drawing.Size(225, 33);
+            this.cbEstadoCivil.TabIndex = 14;
             // 
             // label7
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Garamond", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(255, 248);
+            this.label7.Location = new System.Drawing.Point(12, 339);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 22);
             this.label7.TabIndex = 15;
@@ -232,24 +220,25 @@
             // 
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Garamond", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(12, 328);
+            this.label8.Location = new System.Drawing.Point(255, 248);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 22);
             this.label8.TabIndex = 16;
             this.label8.Text = "Estado Civil";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // cbEstadoCivil
+            // cbSexo
             // 
-            this.cbEstadoCivil.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstadoCivil.FormattingEnabled = true;
-            this.cbEstadoCivil.Items.AddRange(new object[] {
+            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
             "M",
             "F"});
-            this.cbEstadoCivil.Location = new System.Drawing.Point(12, 364);
-            this.cbEstadoCivil.MaxLength = 1;
-            this.cbEstadoCivil.Name = "cbEstadoCivil";
-            this.cbEstadoCivil.Size = new System.Drawing.Size(182, 33);
-            this.cbEstadoCivil.TabIndex = 17;
+            this.cbSexo.Location = new System.Drawing.Point(12, 364);
+            this.cbSexo.MaxLength = 1;
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(182, 33);
+            this.cbSexo.TabIndex = 17;
             // 
             // label10
             // 
@@ -289,6 +278,20 @@
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
+            // numericRequerente
+            // 
+            this.numericRequerente.Enabled = false;
+            this.numericRequerente.Location = new System.Drawing.Point(12, 196);
+            this.numericRequerente.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericRequerente.Name = "numericRequerente";
+            this.numericRequerente.ReadOnly = true;
+            this.numericRequerente.Size = new System.Drawing.Size(180, 31);
+            this.numericRequerente.TabIndex = 5;
+            // 
             // FrmFalecido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -300,10 +303,10 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateObito);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.cbEstadoCivil);
+            this.Controls.Add(this.cbSexo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.cbSexo);
+            this.Controls.Add(this.cbEstadoCivil);
             this.Controls.Add(this.numericIdade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtPai);
@@ -322,8 +325,8 @@
             this.Text = "FrmFalecido";
             this.Load += new System.EventHandler(this.FrmFalecido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericCova)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericIdade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,17 +344,17 @@
         private Label label7;
         public TextBox txtNome;
         public NumericUpDown numericCova;
-        public NumericUpDown numericRequerente;
         public TextBox textCpf;
         public TextBox txtMae;
         public TextBox txtPai;
         public NumericUpDown numericIdade;
-        public ComboBox cbSexo;
-        private Label label8;
         public ComboBox cbEstadoCivil;
+        private Label label8;
+        public ComboBox cbSexo;
         private Label label10;
         public DateTimePicker dateObito;
         private Button button1;
         private Button btnSalvar;
+        public NumericUpDown numericRequerente;
     }
 }
