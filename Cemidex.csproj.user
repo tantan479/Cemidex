@@ -2,6 +2,15 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup />
   <ItemGroup>
+    <Compile Update="CrudCemidex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmFalecido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FrmRequerente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="telaLogin.cs">
       <SubType>Form</SubType>
     </Compile>

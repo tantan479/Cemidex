@@ -19,7 +19,7 @@ namespace Cemidex.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlite("Data Source=cemidex.db");
+            options.UseSqlite("Data Source= C:/Users/Usuario/Desktop/Cemidex/cemidex.db");
         }
 
     }

@@ -37,15 +37,9 @@ namespace Cemidex.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<bool>("CertidaoObito")
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Cpf")
                         .IsRequired()
                         .HasMaxLength(11)
-                        .HasColumnType("TEXT");
-
-                    b.Property<DateTime>("DataEnterro")
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DataObito")
@@ -78,10 +72,6 @@ namespace Cemidex.Migrations
                     b.Property<string>("NomePai")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("RegistroObito")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Sexo")

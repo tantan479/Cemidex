@@ -245,3 +245,6 @@ C:\Users\20191IMI028\Desktop\Cemidex\obj\Debug\net6.0-windows\ref\Cemidex.dll
 C:\Users\20191IMI028\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.pdb
 C:\Users\20191IMI028\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.genruntimeconfig.cache
 C:\Users\Usuario\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.csproj.AssemblyReference.cache
+C:\Users\Usuario\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.crudCemidex.resources
+C:\Users\Usuario\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.FrmRequerente.resources
+C:\Users\Usuario\Desktop\Cemidex\obj\Debug\net6.0-windows\Cemidex.FrmFalecido.resources

@@ -119,6 +119,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox6_Click);
             this.pictureBox5.MouseHover += new System.EventHandler(this.telaMenu_MouseHover);
             // 
             // pictureBox6
@@ -131,6 +132,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             this.pictureBox6.MouseHover += new System.EventHandler(this.telaMenu_MouseHover);
             // 
             // pictureBox7
@@ -143,6 +145,7 @@
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 6;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox6_Click);
             this.pictureBox7.MouseHover += new System.EventHandler(this.telaMenu_MouseHover);
             // 
             // pictureBox8
@@ -155,6 +158,7 @@
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.pictureBox6_Click);
             this.pictureBox8.MouseHover += new System.EventHandler(this.telaMenu_MouseHover);
             // 
             // pictureBox9
@@ -167,6 +171,7 @@
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox9.TabIndex = 8;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox6_Click);
             this.pictureBox9.MouseHover += new System.EventHandler(this.telaMenu_MouseHover);
             // 
             // label1

@@ -30,8 +30,11 @@ namespace Cemidex
         private void label10_MouseEnter(object sender, EventArgs e)
         {
             this.Cursor = Cursors.Hand;
-            this.BackColor = Color.White;
-            this.ForeColor = Color.Teal;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Em desenvolvimento", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

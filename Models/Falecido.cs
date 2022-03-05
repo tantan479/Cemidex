@@ -13,7 +13,7 @@ namespace Cemidex.Models
         [Key]
         public int IdFalecido { get; set; }
 
-        [Required, ForeignKey("Cova")]
+        [Required, /*ForeignKey("Cova")*/]
         public int IdCova { get; set; }
 
         [Required, ForeignKey("Requerente")]
@@ -38,9 +38,9 @@ namespace Cemidex.Models
 
         public string EstadoCivil { get; set; }
         public DateTime DataObito { get; set; }
-        public DateTime DataEnterro { get; set; }
-        public string RegistroObito { get; set; }
-        public Boolean CertidaoObito { get; set; }
+        //public DateTime DataEnterro { get; set; }
+        // public string RegistroObito { get; set; }
+        //public Boolean CertidaoObito { get; set; }
 
 
     }
