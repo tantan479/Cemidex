@@ -38,7 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -120,6 +120,7 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(223, 31);
             this.txtTelefone.TabIndex = 12;
+            this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             this.txtTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // button1
@@ -132,15 +133,15 @@
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSalvar
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(317, 262);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSalvar.Location = new System.Drawing.Point(317, 262);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(112, 34);
+            this.btnSalvar.TabIndex = 23;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
             // 
             // FrmRequerente
             // 
@@ -149,7 +150,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(508, 323);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label3);
@@ -175,8 +176,8 @@
         private Label label2;
         public TextBox txtEndereco;
         private Label label3;
-        private MaskedTextBox txtTelefone;
         private Button button1;
-        private Button button2;
+        private Button btnSalvar;
+        public MaskedTextBox txtTelefone;
     }
 }

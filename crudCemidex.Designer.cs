@@ -42,18 +42,12 @@
             this.btReqAdd = new System.Windows.Forms.Button();
             this.btReqEd = new System.Windows.Forms.Button();
             this.btReqRem = new System.Windows.Forms.Button();
-            this.dgvReq = new System.Windows.Forms.DataGridView();
             this.versao1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.btFalAdd = new System.Windows.Forms.Button();
             this.btFalEd = new System.Windows.Forms.Button();
             this.btFalRem = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.req_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.req_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.req_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.req_end = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.req_tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fal_cova = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fal_cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.versao1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -175,6 +168,7 @@
             this.btReqAdd.Size = new System.Drawing.Size(32, 32);
             this.btReqAdd.TabIndex = 25;
             this.btReqAdd.UseVisualStyleBackColor = true;
+            this.btReqAdd.Click += new System.EventHandler(this.btReqAdd_Click);
             // 
             // btReqEd
             // 
@@ -184,6 +178,7 @@
             this.btReqEd.Size = new System.Drawing.Size(32, 32);
             this.btReqEd.TabIndex = 26;
             this.btReqEd.UseVisualStyleBackColor = true;
+            this.btReqEd.Click += new System.EventHandler(this.btReqEd_Click);
             // 
             // btReqRem
             // 
@@ -193,26 +188,7 @@
             this.btReqRem.Size = new System.Drawing.Size(32, 32);
             this.btReqRem.TabIndex = 27;
             this.btReqRem.UseVisualStyleBackColor = true;
-            // 
-            // dgvReq
-            // 
-            this.dgvReq.AllowUserToAddRows = false;
-            this.dgvReq.AllowUserToDeleteRows = false;
-            this.dgvReq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReq.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.req_id,
-            this.req_nome,
-            this.req_cpf,
-            this.req_end,
-            this.req_tel});
-            this.dgvReq.Location = new System.Drawing.Point(347, 141);
-            this.dgvReq.Name = "dgvReq";
-            this.dgvReq.ReadOnly = true;
-            this.dgvReq.RowHeadersWidth = 62;
-            this.dgvReq.RowTemplate.Height = 33;
-            this.dgvReq.Size = new System.Drawing.Size(775, 74);
-            this.dgvReq.TabIndex = 28;
-            this.dgvReq.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.btReqRem.Click += new System.EventHandler(this.btReqRem_Click);
             // 
             // versao1BindingSource
             // 
@@ -277,51 +253,6 @@
             this.dataGridView1.RowTemplate.Height = 33;
             this.dataGridView1.Size = new System.Drawing.Size(1092, 358);
             this.dataGridView1.TabIndex = 33;
-            // 
-            // req_id
-            // 
-            this.req_id.DataPropertyName = "IdRequerente";
-            this.req_id.HeaderText = "ID";
-            this.req_id.MinimumWidth = 8;
-            this.req_id.Name = "req_id";
-            this.req_id.ReadOnly = true;
-            this.req_id.Width = 150;
-            // 
-            // req_nome
-            // 
-            this.req_nome.DataPropertyName = "Nome";
-            this.req_nome.HeaderText = "Nome";
-            this.req_nome.MinimumWidth = 8;
-            this.req_nome.Name = "req_nome";
-            this.req_nome.ReadOnly = true;
-            this.req_nome.Width = 150;
-            // 
-            // req_cpf
-            // 
-            this.req_cpf.DataPropertyName = "Cpf";
-            this.req_cpf.HeaderText = "CPF";
-            this.req_cpf.MinimumWidth = 8;
-            this.req_cpf.Name = "req_cpf";
-            this.req_cpf.ReadOnly = true;
-            this.req_cpf.Width = 150;
-            // 
-            // req_end
-            // 
-            this.req_end.DataPropertyName = "Endereco";
-            this.req_end.HeaderText = "Endereço";
-            this.req_end.MinimumWidth = 8;
-            this.req_end.Name = "req_end";
-            this.req_end.ReadOnly = true;
-            this.req_end.Width = 150;
-            // 
-            // req_tel
-            // 
-            this.req_tel.DataPropertyName = "Telefone";
-            this.req_tel.HeaderText = "Telefone";
-            this.req_tel.MinimumWidth = 8;
-            this.req_tel.Name = "req_tel";
-            this.req_tel.ReadOnly = true;
-            this.req_tel.Width = 150;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -407,7 +338,6 @@
             this.Controls.Add(this.btFalEd);
             this.Controls.Add(this.btFalAdd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgvReq);
             this.Controls.Add(this.btReqRem);
             this.Controls.Add(this.btReqEd);
             this.Controls.Add(this.btReqAdd);
@@ -427,7 +357,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReq)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.versao1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -449,18 +378,12 @@
         private Button btReqAdd;
         private Button btReqEd;
         private Button btReqRem;
-        private DataGridView dgvReq;
         private BindingSource versao1BindingSource;
         private Label label3;
         private Button btFalAdd;
         private Button btFalEd;
         private Button btFalRem;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn req_id;
-        private DataGridViewTextBoxColumn req_nome;
-        private DataGridViewTextBoxColumn req_cpf;
-        private DataGridViewTextBoxColumn req_end;
-        private DataGridViewTextBoxColumn req_tel;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private DataGridViewTextBoxColumn fal_cova;
         private DataGridViewTextBoxColumn fal_cpf;

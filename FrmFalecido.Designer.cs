@@ -50,7 +50,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.dateObito = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericCova)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericIdade)).BeginInit();
@@ -279,15 +279,15 @@
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnSalvar
             // 
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button2.Location = new System.Drawing.Point(315, 425);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(112, 34);
-            this.button2.TabIndex = 22;
-            this.button2.Text = "Salvar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSalvar.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnSalvar.Location = new System.Drawing.Point(315, 425);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(112, 34);
+            this.btnSalvar.TabIndex = 22;
+            this.btnSalvar.Text = "Salvar";
+            this.btnSalvar.UseVisualStyleBackColor = true;
             // 
             // FrmFalecido
             // 
@@ -296,7 +296,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(508, 480);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dateObito);
             this.Controls.Add(this.label10);
@@ -352,6 +352,6 @@
         private Label label10;
         public DateTimePicker dateObito;
         private Button button1;
-        private Button button2;
+        private Button btnSalvar;
     }
 }

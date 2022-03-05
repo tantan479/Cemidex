@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cemidex;
 
 namespace Cemidex
 {
@@ -35,6 +36,12 @@ namespace Cemidex
         private void pictureBox6_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Em desenvolvimento", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            crudCemidex crudCemidex = new crudCemidex();
+            crudCemidex.ShowDialog();
         }
     }
 }
