@@ -43,5 +43,10 @@ namespace Cemidex
             crudCemidex crudCemidex = new crudCemidex();
             crudCemidex.ShowDialog();
         }
+
+        private void labelEncerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUser = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkEsqueci = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,18 +66,16 @@
             this.label1.Size = new System.Drawing.Size(201, 27);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome do Usuário:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtUser
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox1.BackColor = System.Drawing.Color.Ivory;
-            this.textBox1.Location = new System.Drawing.Point(323, 539);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(433, 31);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.txtUser.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtUser.BackColor = System.Drawing.Color.Ivory;
+            this.txtUser.Location = new System.Drawing.Point(323, 539);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtUser.Name = "txtUser";
+            this.txtUser.Size = new System.Drawing.Size(433, 31);
+            this.txtUser.TabIndex = 2;
             // 
             // label2
             // 
@@ -92,19 +90,17 @@
             this.label2.Size = new System.Drawing.Size(79, 27);
             this.label2.TabIndex = 3;
             this.label2.Text = "Senha:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textBox2
+            // txtPass
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textBox2.BackColor = System.Drawing.Color.Ivory;
-            this.textBox2.Location = new System.Drawing.Point(323, 607);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(433, 31);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.UseSystemPasswordChar = true;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtPass.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtPass.BackColor = System.Drawing.Color.Ivory;
+            this.txtPass.Location = new System.Drawing.Point(323, 607);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(433, 31);
+            this.txtPass.TabIndex = 4;
+            this.txtPass.UseSystemPasswordChar = true;
             // 
             // btnLogin
             // 
@@ -145,16 +141,16 @@
             this.ClientSize = new System.Drawing.Size(1143, 750);
             this.Controls.Add(this.linkEsqueci);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtUser);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Cemidex: Login";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -165,9 +161,9 @@
 
         private PictureBox pictureBox1;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtUser;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtPass;
         private Button btnLogin;
         private LinkLabel linkEsqueci;
     }

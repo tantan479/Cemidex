@@ -23,23 +23,11 @@ namespace Cemidex
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void AtualizarCbRequerente(CemidexContext db)
         {
             cbRequerente.DataSource = db.Requerentes.ToList();
             cbRequerente.DisplayMember = "Nome";
             cbRequerente.ValueMember = "IdRequerente";
-        }
-
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void btReqAdd_Click(object sender, EventArgs e)
@@ -141,8 +129,8 @@ namespace Cemidex
                     falecido.NomePai = form.txtPai.Text;
                     falecido.IdRequerente = Convert.ToInt32(form.numericRequerente.Value);
                     falecido.Idade = Convert.ToInt32(form.numericIdade.Value);
-                    falecido.Sexo = form.cbEstadoCivil.Text;
-                    falecido.EstadoCivil = form.cbSexo.Text;
+                    falecido.Sexo = form.cbSexo.Text;
+                    falecido.EstadoCivil = form.cbEstadoCivil.Text;
                     falecido.DataObito = Convert.ToDateTime(form.dateObito.Text);
                     db.Falecidos.Add(falecido);
                     db.SaveChanges();
@@ -153,6 +141,8 @@ namespace Cemidex
                 }
             }
         }
+
+
 
         private void AtualizarFalecidos(CemidexContext db)
         {
@@ -176,6 +166,81 @@ namespace Cemidex
             {
                 AtualizarFalecidos(db);
             }
+        }
+
+        private void btFalEd_Click(object sender, EventArgs e)
+        {
+            if (dgvFalecidos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow linha = null;
+                linha = dgvFalecidos.SelectedRows[0];
+                Falecido falecido = linha.DataBoundItem as Falecido;
+
+                using (var form = new FrmFalecido())
+                {
+                    form.Text = "Alteração";
+                    form.txtNome.Text = falecido.Nome;
+                    form.textCpf.Text = falecido.Cpf;
+                    form.numericCova.Value = falecido.IdCova;
+                    form.txtMae.Text = falecido.NomeMae;
+                    form.txtPai.Text = falecido.NomePai;
+                    form.numericRequerente.Value = falecido.IdRequerente;
+                    form.numericIdade.Value = falecido.Idade;
+                    form.cbSexo.Text = falecido.Sexo;
+                    form.cbEstadoCivil.Text = falecido.EstadoCivil;
+                    form.dateObito.Value = falecido.DataObito;
+
+                    if (form.ShowDialog() == DialogResult.OK)
+                    {
+                        using (var db = new CemidexContext())
+                        {
+                            falecido.Nome = form.txtNome.Text;
+                            falecido.Cpf = form.textCpf.Text;
+                            falecido.IdCova = Convert.ToInt32(form.numericCova.Text);
+                            falecido.NomeMae = form.txtMae.Text;
+                            falecido.NomePai = form.txtPai.Text;
+                            falecido.IdRequerente = Convert.ToInt32(form.numericRequerente.Value);
+                            falecido.Idade = Convert.ToInt32(form.numericIdade.Value);
+                            falecido.Sexo = form.cbSexo.Text;
+                            falecido.EstadoCivil = form.cbEstadoCivil.Text;
+                            falecido.DataObito = Convert.ToDateTime(form.dateObito.Text);
+                            db.Falecidos.Attach(falecido);
+                            db.Entry(falecido).State = EntityState.Modified;
+                            db.SaveChanges();
+                            AtualizarFalecidos(db);
+                            MessageBox.Show("Falecido Alterado");
+                        }
+                    }
+                }
+            }
+        }
+
+        private void btFalRem_Click(object sender, EventArgs e)
+        {
+            if(dgvFalecidos.SelectedRows.Count > 0)
+            {
+                DataGridViewRow linha = null;
+                linha = dgvFalecidos.SelectedRows[0];
+                Falecido falecido = linha.DataBoundItem as Falecido;
+
+                if (MessageBox.Show("Confirma a exclusão de Falecido",
+                    "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    using (var db = new CemidexContext())
+                    {
+                        db.Falecidos.Attach(falecido);
+                        db.Entry(falecido).State= EntityState.Deleted;
+                        db.SaveChanges();
+                        AtualizarFalecidos(db);
+                        MessageBox.Show("Falecido Excluído");
+                    }
+                }
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

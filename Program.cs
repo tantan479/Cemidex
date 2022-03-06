@@ -10,6 +10,7 @@ namespace Cemidex
         {
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+ 
         }
     }
 }

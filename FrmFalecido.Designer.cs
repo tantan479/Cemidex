@@ -66,7 +66,6 @@
             this.label1.Size = new System.Drawing.Size(67, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNome
             // 
@@ -225,7 +224,6 @@
             this.label8.Size = new System.Drawing.Size(118, 22);
             this.label8.TabIndex = 16;
             this.label8.Text = "Estado Civil";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cbSexo
             // 
@@ -321,9 +319,9 @@
             this.Controls.Add(this.numericCova);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmFalecido";
             this.Text = "FrmFalecido";
-            this.Load += new System.EventHandler(this.FrmFalecido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericCova)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericIdade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericRequerente)).EndInit();

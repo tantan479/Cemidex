@@ -51,7 +51,6 @@
             this.label1.Size = new System.Drawing.Size(67, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNome
             // 
@@ -60,7 +59,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(180, 31);
             this.txtNome.TabIndex = 2;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label4
             // 
@@ -121,7 +119,6 @@
             this.txtTelefone.Size = new System.Drawing.Size(223, 31);
             this.txtTelefone.TabIndex = 12;
             this.txtTelefone.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
-            this.txtTelefone.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
             // 
             // button1
             // 
@@ -160,6 +157,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmRequerente";
             this.Text = "FrmRequerente";
             this.ResumeLayout(false);

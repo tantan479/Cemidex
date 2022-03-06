@@ -332,6 +332,7 @@
             this.label10.Size = new System.Drawing.Size(78, 22);
             this.label10.TabIndex = 20;
             this.label10.Text = "Encerrar";
+            this.label10.Click += new System.EventHandler(this.labelEncerrar_Click);
             this.label10.MouseHover += new System.EventHandler(this.label10_MouseEnter);
             // 
             // telaMenu
@@ -362,6 +363,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "telaMenu";

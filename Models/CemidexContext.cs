@@ -22,5 +22,7 @@ namespace Cemidex.Models
             options.UseSqlite("Data Source= C:/Users/Usuario/Desktop/Cemidex/cemidex.db");
         }
 
+
+
     }
 }
